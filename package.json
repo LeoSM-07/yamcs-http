@@ -1,5 +1,5 @@
 {
-  "name": "@template/basic",
+  "name": "yamcs-http",
   "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.14.0",
@@ -7,7 +7,7 @@
   "description": "A basic Effect package",
   "repository": {
     "type": "git",
-    "url": "<PLACEHOLDER>"
+    "url": "https://github.com/LeoSM-07/yamcs-http"
   },
   "publishConfig": {
     "access": "public",
@@ -75,3 +75,4 @@
     }
   }
 }
+
