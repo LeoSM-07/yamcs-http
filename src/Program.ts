@@ -1,10 +1,10 @@
 import { Effect, Layer, Logger, LogLevel } from "effect"
-import { Yamcs } from "./yamcs-http.ts"
+import { Yamcs } from "./yamcs-http.js"
 
 const program = Effect.gen(function*() {
   const yamcs = yield* Yamcs
 
-  const result = yield* yamcs.MDB["get_mission_database"]({
+  const result = yield* yamcs.MDB.getMissionDatabase({
     path: {
       instance: "gs_backend"
     }

@@ -8,7 +8,7 @@ import {
   HttpClient
 } from "@effect/platform"
 import { Effect, Schema } from "effect"
-import * as yamcs from "./types.ts"
+import * as yamcs from "./types.js"
 
 const ListParametersResponse = Schema.Struct({
   // Matching subsystems when the ``system`` option was specified
