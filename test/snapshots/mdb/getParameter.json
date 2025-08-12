@@ -1,0 +1,34 @@
+{
+  "name": "pl_battery_voltage",
+  "qualifiedName": "/FC433/FlightComputer/pl_battery_voltage",
+  "shortDescription": "Battery Voltage",
+  "type": {
+    "engType": "float",
+    "dataEncoding": {
+      "type": "INTEGER",
+      "littleEndian": true,
+      "sizeInBits": 16,
+      "encoding": "UNSIGNED",
+      "defaultCalibrator": {
+        "type": "MATH_OPERATION"
+      }
+    },
+    "unitSet": [
+      {
+        "unit": "V"
+      }
+    ],
+    "name": "uint16_V_pl_battery",
+    "qualifiedName": "/FC433/FlightComputer/uint16_V_pl_battery",
+    "sizeInBits": 32
+  },
+  "dataSource": "TELEMETERED",
+  "usedBy": {
+    "container": [
+      {
+        "name": "FCPacket",
+        "qualifiedName": "/FC433/FlightComputer/FCPacket"
+      }
+    ]
+  }
+}

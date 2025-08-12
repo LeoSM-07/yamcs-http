@@ -1,0 +1,2392 @@
+{
+  "parameters": [
+    {
+      "name": "acceleration_x",
+      "qualifiedName": "/FC433/FlightComputer/acceleration_x",
+      "shortDescription": "Acceleration x",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC433/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "acceleration_y",
+      "qualifiedName": "/FC433/FlightComputer/acceleration_y",
+      "shortDescription": "Acceleration Y",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC433/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "acceleration_z",
+      "qualifiedName": "/FC433/FlightComputer/acceleration_z",
+      "shortDescription": "Acceleration Z",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC433/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "alt_altitude",
+      "qualifiedName": "/FC433/FlightComputer/alt_altitude",
+      "shortDescription": "Altitude from ground (calculated from pressure)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "ft"
+          }
+        ],
+        "name": "float_ft",
+        "qualifiedName": "/FC433/FlightComputer/float_ft"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "alt_apogee",
+      "qualifiedName": "/FC433/FlightComputer/alt_apogee",
+      "shortDescription": "Calculated Apogee",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "ft"
+          }
+        ],
+        "name": "java_float_ft",
+        "qualifiedName": "/FC433/FlightComputer/java_float_ft"
+      },
+      "dataSource": "DERIVED"
+    },
+    {
+      "name": "angle_pitch",
+      "qualifiedName": "/FC433/FlightComputer/angle_pitch",
+      "shortDescription": "Angular pitch",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC433/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "angle_roll",
+      "qualifiedName": "/FC433/FlightComputer/angle_roll",
+      "shortDescription": "Angular roll",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC433/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "angle_yaw",
+      "qualifiedName": "/FC433/FlightComputer/angle_yaw",
+      "shortDescription": "Angular yaw",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC433/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "battery_voltage",
+      "qualifiedName": "/FC433/FlightComputer/battery_voltage",
+      "shortDescription": "Battery Voltage",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "V"
+          }
+        ],
+        "name": "uint8_V_battery",
+        "qualifiedName": "/FC433/FlightComputer/uint8_V_battery"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "CTSFlag",
+      "qualifiedName": "/FC433/FlightComputer/CTSFlag",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC433/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_armed_HW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_armed_HW",
+      "shortDescription": "drogueEmatch: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_armed_SW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_armed_SW",
+      "shortDescription": "drogueEmatch: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_continuity_HW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_continuity_HW",
+      "shortDescription": "drogue: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energized_SW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_energized_SW",
+      "shortDescription": "drogue: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energizedCurrent_HW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_energizedCurrent_HW",
+      "shortDescription": "drogue: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energizedGate_HW",
+      "qualifiedName": "/FC433/FlightComputer/drogue_energizedGate_HW",
+      "shortDescription": "drogue: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "flight_stage",
+      "qualifiedName": "/FC433/FlightComputer/flight_stage",
+      "shortDescription": "Flight stage",
+      "type": {
+        "engType": "enumeration",
+        "name": "flightStageType",
+        "qualifiedName": "/FC433/FlightComputer/flightStageType"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_altitude",
+      "qualifiedName": "/FC433/FlightComputer/gps_altitude",
+      "shortDescription": "GPS altitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_latitude",
+      "qualifiedName": "/FC433/FlightComputer/gps_latitude",
+      "shortDescription": "GPS latitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_longitude",
+      "qualifiedName": "/FC433/FlightComputer/gps_longitude",
+      "shortDescription": "GPS longitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_time_last_update",
+      "qualifiedName": "/FC433/FlightComputer/gps_time_last_update",
+      "shortDescription": "GPS time from last update",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "HAM_call_sign",
+      "qualifiedName": "/FC433/FlightComputer/HAM_call_sign",
+      "shortDescription": "HAM call sign",
+      "type": {
+        "engType": "string",
+        "name": "callsign",
+        "qualifiedName": "/FC433/FlightComputer/callsign"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_armed_HW",
+      "qualifiedName": "/FC433/FlightComputer/main_armed_HW",
+      "shortDescription": "Main: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_armed_SW",
+      "qualifiedName": "/FC433/FlightComputer/main_armed_SW",
+      "shortDescription": "Main: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_continuity_HW",
+      "qualifiedName": "/FC433/FlightComputer/main_continuity_HW",
+      "shortDescription": "Nitrogen fill valve: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energized_SW",
+      "qualifiedName": "/FC433/FlightComputer/main_energized_SW",
+      "shortDescription": "Main: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energizedCurrent_HW",
+      "qualifiedName": "/FC433/FlightComputer/main_energizedCurrent_HW",
+      "shortDescription": "Main: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energizedGate_HW",
+      "qualifiedName": "/FC433/FlightComputer/main_energizedGate_HW",
+      "shortDescription": "Main: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "meta_packet_size",
+      "qualifiedName": "/FC433/FlightComputer/meta_packet_size",
+      "type": {
+        "engType": "integer",
+        "name": "uint32",
+        "qualifiedName": "/FC433/FlightComputer/uint32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "packet_id",
+      "qualifiedName": "/FC433/FlightComputer/packet_id",
+      "shortDescription": "Packet ID number",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC433/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "padding8",
+      "qualifiedName": "/FC433/FlightComputer/padding8",
+      "type": {
+        "engType": "integer",
+        "name": "pad8",
+        "qualifiedName": "/FC433/FlightComputer/pad8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pading",
+      "qualifiedName": "/FC433/FlightComputer/pading",
+      "type": {
+        "engType": "integer",
+        "name": "pad",
+        "qualifiedName": "/FC433/FlightComputer/pad"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_active_temp_ctrl_state",
+      "qualifiedName": "/FC433/FlightComputer/pl_active_temp_ctrl_state",
+      "shortDescription": "Payload: Active temperature control state",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_battery_voltage",
+      "qualifiedName": "/FC433/FlightComputer/pl_battery_voltage",
+      "shortDescription": "Battery Voltage",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "V"
+          }
+        ],
+        "name": "uint16_V_pl_battery",
+        "qualifiedName": "/FC433/FlightComputer/uint16_V_pl_battery"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_ok",
+      "qualifiedName": "/FC433/FlightComputer/pl_ok",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_sample_temp",
+      "qualifiedName": "/FC433/FlightComputer/pl_sample_temp",
+      "shortDescription": "Payload: Actual Sample temperautre",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "int16_C",
+        "qualifiedName": "/FC433/FlightComputer/int16_C"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_sampling_state",
+      "qualifiedName": "/FC433/FlightComputer/pl_sampling_state",
+      "shortDescription": "Payload: Sampling state",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_target_temp",
+      "qualifiedName": "/FC433/FlightComputer/pl_target_temp",
+      "shortDescription": "Payload: Target temerature",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C",
+        "qualifiedName": "/FC433/FlightComputer/uint8_C"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_time_since_start",
+      "qualifiedName": "/FC433/FlightComputer/pl_time_since_start",
+      "shortDescription": "Payload: Time since start of sampling",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "ms"
+          }
+        ],
+        "name": "uint32_ms",
+        "qualifiedName": "/FC433/FlightComputer/uint32_ms"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_x",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_amplitude_x",
+      "shortDescription": "Payload: Vibration amplitude x",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC433/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_y",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_amplitude_y",
+      "shortDescription": "Payload: Vibration amplitude y",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC433/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_z",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_amplitude_z",
+      "shortDescription": "Payload: Vibration amplitude z",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC433/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_x",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_freq_x",
+      "shortDescription": "Payload: Vibration frequency x",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC433/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_y",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_freq_y",
+      "shortDescription": "Payload: Vibration frequency y",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC433/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_z",
+      "qualifiedName": "/FC433/FlightComputer/pl_vibration_freq_z",
+      "shortDescription": "Payload: Vibration frequency z",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC433/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "polling_rate",
+      "qualifiedName": "/FC433/FlightComputer/polling_rate",
+      "shortDescription": "Polling rate",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "ms"
+          }
+        ],
+        "name": "uint16_ms",
+        "qualifiedName": "/FC433/FlightComputer/uint16_ms"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "prop_cc_pressure",
+      "qualifiedName": "/FC433/FlightComputer/prop_cc_pressure",
+      "shortDescription": "Combustion chamber pressure (prop bottom)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "psi"
+          }
+        ],
+        "name": "uint16_psi_calibrated",
+        "qualifiedName": "/FC433/FlightComputer/uint16_psi_calibrated"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "prop_energized_elec",
+      "qualifiedName": "/FC433/FlightComputer/prop_energized_elec",
+      "shortDescription": "Electrical energized propulsion boards",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "RSSI",
+      "qualifiedName": "/FC433/FlightComputer/RSSI",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC433/FlightComputer/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_armed_HW",
+      "qualifiedName": "/FC433/FlightComputer/run_armed_HW",
+      "shortDescription": "F/DOV normally open: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_armed_SW",
+      "qualifiedName": "/FC433/FlightComputer/run_armed_SW",
+      "shortDescription": "F/DOV normally open: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_continuity_HW",
+      "qualifiedName": "/FC433/FlightComputer/run_continuity_HW",
+      "shortDescription": "F/DOV normally open: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energized_SW",
+      "qualifiedName": "/FC433/FlightComputer/run_energized_SW",
+      "shortDescription": "F/DOV normally open: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energizedCurrent_HW",
+      "qualifiedName": "/FC433/FlightComputer/run_energizedCurrent_HW",
+      "shortDescription": "F/DOV normally open: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energizedGate_HW",
+      "qualifiedName": "/FC433/FlightComputer/run_energizedGate_HW",
+      "shortDescription": "F/DOV normally open: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "rx_tx_ratio",
+      "qualifiedName": "/FC433/FlightComputer/rx_tx_ratio",
+      "shortDescription": "Radio rx/tx ratio",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC433/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "SNR",
+      "qualifiedName": "/FC433/FlightComputer/SNR",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC433/FlightComputer/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "tank_pressure",
+      "qualifiedName": "/FC433/FlightComputer/tank_pressure",
+      "shortDescription": "Tank bottom pressure",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "psi"
+          }
+        ],
+        "name": "uint16_psi_calibrated",
+        "qualifiedName": "/FC433/FlightComputer/uint16_psi_calibrated"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "tank_temp",
+      "qualifiedName": "/FC433/FlightComputer/tank_temp",
+      "shortDescription": "Tank temperature (prop bottom)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C_tank_temp",
+        "qualifiedName": "/FC433/FlightComputer/uint8_C_tank_temp"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "time_from_sw_reset",
+      "qualifiedName": "/FC433/FlightComputer/time_from_sw_reset",
+      "shortDescription": "Time from last sofware reset",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "s"
+          }
+        ],
+        "name": "uint32_s",
+        "qualifiedName": "/FC433/FlightComputer/uint32_s"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_armed_HW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_armed_HW",
+      "shortDescription": "F/DOV normally closed: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_armed_SW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_armed_SW",
+      "shortDescription": "F/DOV normally closed: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_continuity_HW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_continuity_HW",
+      "shortDescription": "F/DOV normally closed: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energized_SW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_energized_SW",
+      "shortDescription": "F/DOV normally closed: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energizedCurrent_HW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_energizedCurrent_HW",
+      "shortDescription": "F/DOV normally closed: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energizedGate_HW",
+      "qualifiedName": "/FC433/FlightComputer/ufd_energizedGate_HW",
+      "shortDescription": "F/DOV normally closed: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "v_ext_sns",
+      "qualifiedName": "/FC433/FlightComputer/v_ext_sns",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_armed_HW",
+      "qualifiedName": "/FC433/FlightComputer/vent_armed_HW",
+      "shortDescription": "Vent: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_armed_SW",
+      "qualifiedName": "/FC433/FlightComputer/vent_armed_SW",
+      "shortDescription": "Vent: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_continuity_HW",
+      "qualifiedName": "/FC433/FlightComputer/vent_continuity_HW",
+      "shortDescription": "Vent: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energized_SW",
+      "qualifiedName": "/FC433/FlightComputer/vent_energized_SW",
+      "shortDescription": "Vent: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energizedCurrent_HW",
+      "qualifiedName": "/FC433/FlightComputer/vent_energizedCurrent_HW",
+      "shortDescription": "Vent: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energizedGate_HW",
+      "qualifiedName": "/FC433/FlightComputer/vent_energizedGate_HW",
+      "shortDescription": "Vent: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC433/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_temp",
+      "qualifiedName": "/FC433/FlightComputer/vent_temp",
+      "shortDescription": "Vent valve temperature (prop top)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C_tank_temp",
+        "qualifiedName": "/FC433/FlightComputer/uint8_C_tank_temp"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vertical_speed",
+      "qualifiedName": "/FC433/FlightComputer/vertical_speed",
+      "shortDescription": "Vertical speed",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m"
+          },
+          {
+            "unit": "s"
+          }
+        ],
+        "name": "int32_mps",
+        "qualifiedName": "/FC433/FlightComputer/int32_mps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "bandwidth",
+      "qualifiedName": "/FC433/GSRadio/bandwidth",
+      "shortDescription": "Bandwidth",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/GSRadio/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "coding_rate",
+      "qualifiedName": "/FC433/GSRadio/coding_rate",
+      "shortDescription": "Coding Rate",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC433/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "frequency",
+      "qualifiedName": "/FC433/GSRadio/frequency",
+      "shortDescription": "Frequency",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC433/GSRadio/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "power",
+      "qualifiedName": "/FC433/GSRadio/power",
+      "shortDescription": "Power",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC433/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "spreading_factor",
+      "qualifiedName": "/FC433/GSRadio/spreading_factor",
+      "shortDescription": "Spreading Factor",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC433/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "acceleration_x",
+      "qualifiedName": "/FC903/FlightComputer/acceleration_x",
+      "shortDescription": "Acceleration x",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC903/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "acceleration_y",
+      "qualifiedName": "/FC903/FlightComputer/acceleration_y",
+      "shortDescription": "Acceleration Y",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC903/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "acceleration_z",
+      "qualifiedName": "/FC903/FlightComputer/acceleration_z",
+      "shortDescription": "Acceleration Z",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m/s²"
+          }
+        ],
+        "name": "int16_mpsps",
+        "qualifiedName": "/FC903/FlightComputer/int16_mpsps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "alt_altitude",
+      "qualifiedName": "/FC903/FlightComputer/alt_altitude",
+      "shortDescription": "Altitude from ground (calculated from pressure)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "ft"
+          }
+        ],
+        "name": "float_ft",
+        "qualifiedName": "/FC903/FlightComputer/float_ft"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "alt_apogee",
+      "qualifiedName": "/FC903/FlightComputer/alt_apogee",
+      "shortDescription": "Calculated Apogee",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "ft"
+          }
+        ],
+        "name": "java_float_ft",
+        "qualifiedName": "/FC903/FlightComputer/java_float_ft"
+      },
+      "dataSource": "DERIVED"
+    },
+    {
+      "name": "angle_pitch",
+      "qualifiedName": "/FC903/FlightComputer/angle_pitch",
+      "shortDescription": "Angular pitch",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC903/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "angle_roll",
+      "qualifiedName": "/FC903/FlightComputer/angle_roll",
+      "shortDescription": "Angular roll",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC903/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "angle_yaw",
+      "qualifiedName": "/FC903/FlightComputer/angle_yaw",
+      "shortDescription": "Angular yaw",
+      "type": {
+        "engType": "integer",
+        "name": "int16",
+        "qualifiedName": "/FC903/FlightComputer/int16"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "battery_voltage",
+      "qualifiedName": "/FC903/FlightComputer/battery_voltage",
+      "shortDescription": "Battery Voltage",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "V"
+          }
+        ],
+        "name": "uint8_V_battery",
+        "qualifiedName": "/FC903/FlightComputer/uint8_V_battery"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "CTSFlag",
+      "qualifiedName": "/FC903/FlightComputer/CTSFlag",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC903/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_armed_HW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_armed_HW",
+      "shortDescription": "drogueEmatch: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_armed_SW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_armed_SW",
+      "shortDescription": "drogueEmatch: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_continuity_HW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_continuity_HW",
+      "shortDescription": "drogue: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energized_SW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_energized_SW",
+      "shortDescription": "drogue: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energizedCurrent_HW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_energizedCurrent_HW",
+      "shortDescription": "drogue: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "drogue_energizedGate_HW",
+      "qualifiedName": "/FC903/FlightComputer/drogue_energizedGate_HW",
+      "shortDescription": "drogue: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "flight_stage",
+      "qualifiedName": "/FC903/FlightComputer/flight_stage",
+      "shortDescription": "Flight stage",
+      "type": {
+        "engType": "enumeration",
+        "name": "flightStageType",
+        "qualifiedName": "/FC903/FlightComputer/flightStageType"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_altitude",
+      "qualifiedName": "/FC903/FlightComputer/gps_altitude",
+      "shortDescription": "GPS altitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_latitude",
+      "qualifiedName": "/FC903/FlightComputer/gps_latitude",
+      "shortDescription": "GPS latitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_longitude",
+      "qualifiedName": "/FC903/FlightComputer/gps_longitude",
+      "shortDescription": "GPS longitude",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "gps_time_last_update",
+      "qualifiedName": "/FC903/FlightComputer/gps_time_last_update",
+      "shortDescription": "GPS time from last update",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/FlightComputer/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "HAM_call_sign",
+      "qualifiedName": "/FC903/FlightComputer/HAM_call_sign",
+      "shortDescription": "HAM call sign",
+      "type": {
+        "engType": "string",
+        "name": "callsign",
+        "qualifiedName": "/FC903/FlightComputer/callsign"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_armed_HW",
+      "qualifiedName": "/FC903/FlightComputer/main_armed_HW",
+      "shortDescription": "Main: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_armed_SW",
+      "qualifiedName": "/FC903/FlightComputer/main_armed_SW",
+      "shortDescription": "Main: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_continuity_HW",
+      "qualifiedName": "/FC903/FlightComputer/main_continuity_HW",
+      "shortDescription": "Nitrogen fill valve: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energized_SW",
+      "qualifiedName": "/FC903/FlightComputer/main_energized_SW",
+      "shortDescription": "Main: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energizedCurrent_HW",
+      "qualifiedName": "/FC903/FlightComputer/main_energizedCurrent_HW",
+      "shortDescription": "Main: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "main_energizedGate_HW",
+      "qualifiedName": "/FC903/FlightComputer/main_energizedGate_HW",
+      "shortDescription": "Main: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "meta_packet_size",
+      "qualifiedName": "/FC903/FlightComputer/meta_packet_size",
+      "type": {
+        "engType": "integer",
+        "name": "uint32",
+        "qualifiedName": "/FC903/FlightComputer/uint32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "packet_id",
+      "qualifiedName": "/FC903/FlightComputer/packet_id",
+      "shortDescription": "Packet ID number",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC903/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "padding8",
+      "qualifiedName": "/FC903/FlightComputer/padding8",
+      "type": {
+        "engType": "integer",
+        "name": "pad8",
+        "qualifiedName": "/FC903/FlightComputer/pad8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pading",
+      "qualifiedName": "/FC903/FlightComputer/pading",
+      "type": {
+        "engType": "integer",
+        "name": "pad",
+        "qualifiedName": "/FC903/FlightComputer/pad"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_active_temp_ctrl_state",
+      "qualifiedName": "/FC903/FlightComputer/pl_active_temp_ctrl_state",
+      "shortDescription": "Payload: Active temperature control state",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_battery_voltage",
+      "qualifiedName": "/FC903/FlightComputer/pl_battery_voltage",
+      "shortDescription": "Battery Voltage",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "V"
+          }
+        ],
+        "name": "uint16_V_pl_battery",
+        "qualifiedName": "/FC903/FlightComputer/uint16_V_pl_battery"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_ok",
+      "qualifiedName": "/FC903/FlightComputer/pl_ok",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_sample_temp",
+      "qualifiedName": "/FC903/FlightComputer/pl_sample_temp",
+      "shortDescription": "Payload: Actual Sample temperautre",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "int16_C",
+        "qualifiedName": "/FC903/FlightComputer/int16_C"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_sampling_state",
+      "qualifiedName": "/FC903/FlightComputer/pl_sampling_state",
+      "shortDescription": "Payload: Sampling state",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_target_temp",
+      "qualifiedName": "/FC903/FlightComputer/pl_target_temp",
+      "shortDescription": "Payload: Target temerature",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C",
+        "qualifiedName": "/FC903/FlightComputer/uint8_C"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_time_since_start",
+      "qualifiedName": "/FC903/FlightComputer/pl_time_since_start",
+      "shortDescription": "Payload: Time since start of sampling",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "ms"
+          }
+        ],
+        "name": "uint32_ms",
+        "qualifiedName": "/FC903/FlightComputer/uint32_ms"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_x",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_amplitude_x",
+      "shortDescription": "Payload: Vibration amplitude x",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC903/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_y",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_amplitude_y",
+      "shortDescription": "Payload: Vibration amplitude y",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC903/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_amplitude_z",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_amplitude_z",
+      "shortDescription": "Payload: Vibration amplitude z",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "mV"
+          }
+        ],
+        "name": "uint16_V",
+        "qualifiedName": "/FC903/FlightComputer/uint16_V"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_x",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_freq_x",
+      "shortDescription": "Payload: Vibration frequency x",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC903/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_y",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_freq_y",
+      "shortDescription": "Payload: Vibration frequency y",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC903/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "pl_vibration_freq_z",
+      "qualifiedName": "/FC903/FlightComputer/pl_vibration_freq_z",
+      "shortDescription": "Payload: Vibration frequency z",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "Hz"
+          }
+        ],
+        "name": "uint16_Hz",
+        "qualifiedName": "/FC903/FlightComputer/uint16_Hz"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "polling_rate",
+      "qualifiedName": "/FC903/FlightComputer/polling_rate",
+      "shortDescription": "Polling rate",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "ms"
+          }
+        ],
+        "name": "uint16_ms",
+        "qualifiedName": "/FC903/FlightComputer/uint16_ms"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "prop_cc_pressure",
+      "qualifiedName": "/FC903/FlightComputer/prop_cc_pressure",
+      "shortDescription": "Combustion chamber pressure (prop bottom)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "psi"
+          }
+        ],
+        "name": "uint16_psi_calibrated",
+        "qualifiedName": "/FC903/FlightComputer/uint16_psi_calibrated"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "prop_energized_elec",
+      "qualifiedName": "/FC903/FlightComputer/prop_energized_elec",
+      "shortDescription": "Electrical energized propulsion boards",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "RSSI",
+      "qualifiedName": "/FC903/FlightComputer/RSSI",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC903/FlightComputer/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_armed_HW",
+      "qualifiedName": "/FC903/FlightComputer/run_armed_HW",
+      "shortDescription": "F/DOV normally open: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_armed_SW",
+      "qualifiedName": "/FC903/FlightComputer/run_armed_SW",
+      "shortDescription": "F/DOV normally open: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_continuity_HW",
+      "qualifiedName": "/FC903/FlightComputer/run_continuity_HW",
+      "shortDescription": "F/DOV normally open: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energized_SW",
+      "qualifiedName": "/FC903/FlightComputer/run_energized_SW",
+      "shortDescription": "F/DOV normally open: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energizedCurrent_HW",
+      "qualifiedName": "/FC903/FlightComputer/run_energizedCurrent_HW",
+      "shortDescription": "F/DOV normally open: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "run_energizedGate_HW",
+      "qualifiedName": "/FC903/FlightComputer/run_energizedGate_HW",
+      "shortDescription": "F/DOV normally open: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "rx_tx_ratio",
+      "qualifiedName": "/FC903/FlightComputer/rx_tx_ratio",
+      "shortDescription": "Radio rx/tx ratio",
+      "type": {
+        "engType": "integer",
+        "name": "uint8",
+        "qualifiedName": "/FC903/FlightComputer/uint8"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "SNR",
+      "qualifiedName": "/FC903/FlightComputer/SNR",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC903/FlightComputer/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "tank_pressure",
+      "qualifiedName": "/FC903/FlightComputer/tank_pressure",
+      "shortDescription": "Tank bottom pressure",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "psi"
+          }
+        ],
+        "name": "uint16_psi_calibrated",
+        "qualifiedName": "/FC903/FlightComputer/uint16_psi_calibrated"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "tank_temp",
+      "qualifiedName": "/FC903/FlightComputer/tank_temp",
+      "shortDescription": "Tank temperature (prop bottom)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C_tank_temp",
+        "qualifiedName": "/FC903/FlightComputer/uint8_C_tank_temp"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "time_from_sw_reset",
+      "qualifiedName": "/FC903/FlightComputer/time_from_sw_reset",
+      "shortDescription": "Time from last sofware reset",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "s"
+          }
+        ],
+        "name": "uint32_s",
+        "qualifiedName": "/FC903/FlightComputer/uint32_s"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_armed_HW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_armed_HW",
+      "shortDescription": "F/DOV normally closed: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_armed_SW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_armed_SW",
+      "shortDescription": "F/DOV normally closed: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_continuity_HW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_continuity_HW",
+      "shortDescription": "F/DOV normally closed: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energized_SW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_energized_SW",
+      "shortDescription": "F/DOV normally closed: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energizedCurrent_HW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_energizedCurrent_HW",
+      "shortDescription": "F/DOV normally closed: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "ufd_energizedGate_HW",
+      "qualifiedName": "/FC903/FlightComputer/ufd_energizedGate_HW",
+      "shortDescription": "F/DOV normally closed: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "v_ext_sns",
+      "qualifiedName": "/FC903/FlightComputer/v_ext_sns",
+      "shortDescription": "FC RPO sense signal",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_armed_HW",
+      "qualifiedName": "/FC903/FlightComputer/vent_armed_HW",
+      "shortDescription": "Vent: electrical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_armed_SW",
+      "qualifiedName": "/FC903/FlightComputer/vent_armed_SW",
+      "shortDescription": "Vent: logical armed",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_continuity_HW",
+      "qualifiedName": "/FC903/FlightComputer/vent_continuity_HW",
+      "shortDescription": "Vent: electrical continuity",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energized_SW",
+      "qualifiedName": "/FC903/FlightComputer/vent_energized_SW",
+      "shortDescription": "Vent: logical energized",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energizedCurrent_HW",
+      "qualifiedName": "/FC903/FlightComputer/vent_energizedCurrent_HW",
+      "shortDescription": "Vent: electrical energized current",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_energizedGate_HW",
+      "qualifiedName": "/FC903/FlightComputer/vent_energizedGate_HW",
+      "shortDescription": "Vent: electrical energized gate",
+      "type": {
+        "engType": "boolean",
+        "name": "bool",
+        "qualifiedName": "/FC903/FlightComputer/bool"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vent_temp",
+      "qualifiedName": "/FC903/FlightComputer/vent_temp",
+      "shortDescription": "Vent valve temperature (prop top)",
+      "type": {
+        "engType": "float",
+        "unitSet": [
+          {
+            "unit": "°C"
+          }
+        ],
+        "name": "uint8_C_tank_temp",
+        "qualifiedName": "/FC903/FlightComputer/uint8_C_tank_temp"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "vertical_speed",
+      "qualifiedName": "/FC903/FlightComputer/vertical_speed",
+      "shortDescription": "Vertical speed",
+      "type": {
+        "engType": "integer",
+        "unitSet": [
+          {
+            "unit": "m"
+          },
+          {
+            "unit": "s"
+          }
+        ],
+        "name": "int32_mps",
+        "qualifiedName": "/FC903/FlightComputer/int32_mps"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "bandwidth",
+      "qualifiedName": "/FC903/GSRadio/bandwidth",
+      "shortDescription": "Bandwidth",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/GSRadio/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "coding_rate",
+      "qualifiedName": "/FC903/GSRadio/coding_rate",
+      "shortDescription": "Coding Rate",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC903/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "frequency",
+      "qualifiedName": "/FC903/GSRadio/frequency",
+      "shortDescription": "Frequency",
+      "type": {
+        "engType": "float",
+        "name": "float",
+        "qualifiedName": "/FC903/GSRadio/float"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "power",
+      "qualifiedName": "/FC903/GSRadio/power",
+      "shortDescription": "Power",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC903/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "spreading_factor",
+      "qualifiedName": "/FC903/GSRadio/spreading_factor",
+      "shortDescription": "Spreading Factor",
+      "type": {
+        "engType": "integer",
+        "name": "int32",
+        "qualifiedName": "/FC903/GSRadio/int32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN0",
+      "qualifiedName": "/LabJackT7/AIN0",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN1",
+      "qualifiedName": "/LabJackT7/AIN1",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN10",
+      "qualifiedName": "/LabJackT7/AIN10",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN100",
+      "qualifiedName": "/LabJackT7/AIN100",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN101",
+      "qualifiedName": "/LabJackT7/AIN101",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN102",
+      "qualifiedName": "/LabJackT7/AIN102",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN103",
+      "qualifiedName": "/LabJackT7/AIN103",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN104",
+      "qualifiedName": "/LabJackT7/AIN104",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN105",
+      "qualifiedName": "/LabJackT7/AIN105",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN106",
+      "qualifiedName": "/LabJackT7/AIN106",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN107",
+      "qualifiedName": "/LabJackT7/AIN107",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN108",
+      "qualifiedName": "/LabJackT7/AIN108",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN109",
+      "qualifiedName": "/LabJackT7/AIN109",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN11",
+      "qualifiedName": "/LabJackT7/AIN11",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN110",
+      "qualifiedName": "/LabJackT7/AIN110",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN111",
+      "qualifiedName": "/LabJackT7/AIN111",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN112",
+      "qualifiedName": "/LabJackT7/AIN112",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN113",
+      "qualifiedName": "/LabJackT7/AIN113",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN114",
+      "qualifiedName": "/LabJackT7/AIN114",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN115",
+      "qualifiedName": "/LabJackT7/AIN115",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN116",
+      "qualifiedName": "/LabJackT7/AIN116",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN117",
+      "qualifiedName": "/LabJackT7/AIN117",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN118",
+      "qualifiedName": "/LabJackT7/AIN118",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN119",
+      "qualifiedName": "/LabJackT7/AIN119",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN12",
+      "qualifiedName": "/LabJackT7/AIN12",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN120",
+      "qualifiedName": "/LabJackT7/AIN120",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN121",
+      "qualifiedName": "/LabJackT7/AIN121",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN122",
+      "qualifiedName": "/LabJackT7/AIN122",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN123",
+      "qualifiedName": "/LabJackT7/AIN123",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN124",
+      "qualifiedName": "/LabJackT7/AIN124",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN125",
+      "qualifiedName": "/LabJackT7/AIN125",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN126",
+      "qualifiedName": "/LabJackT7/AIN126",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN127",
+      "qualifiedName": "/LabJackT7/AIN127",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN13",
+      "qualifiedName": "/LabJackT7/AIN13",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN14",
+      "qualifiedName": "/LabJackT7/AIN14",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN15",
+      "qualifiedName": "/LabJackT7/AIN15",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN16",
+      "qualifiedName": "/LabJackT7/AIN16",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN17",
+      "qualifiedName": "/LabJackT7/AIN17",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN18",
+      "qualifiedName": "/LabJackT7/AIN18",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    },
+    {
+      "name": "AIN19",
+      "qualifiedName": "/LabJackT7/AIN19",
+      "type": {
+        "engType": "float",
+        "name": "float_32",
+        "qualifiedName": "/LabJackT7/float_32"
+      },
+      "dataSource": "TELEMETERED"
+    }
+  ],
+  "continuationToken": "eyJuYW1lIjoiL0xhYkphY2tUNy9BSU4xOSIsInNwYWNlU3lzdGVtIjpmYWxzZX0",
+  "totalSize": 370
+}
