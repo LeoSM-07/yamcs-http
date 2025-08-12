@@ -1,5 +1,13 @@
-import { FetchHttpClient, HttpApi, HttpApiClient, HttpApiEndpoint, HttpApiGroup, HttpClient } from "@effect/platform"
-import { Effect, Layer, Logger, LogLevel, Schema } from "effect"
+import {
+  FetchHttpClient,
+  HttpApi,
+  HttpApiClient,
+  HttpApiEndpoint,
+  HttpApiError,
+  HttpApiGroup,
+  HttpClient
+} from "@effect/platform"
+import { Effect, Schema } from "effect"
 import * as yamcs from "./types.ts"
 
 const ListParametersResponse = Schema.Struct({
@@ -19,29 +27,26 @@ const ListParametersResponse = Schema.Struct({
 })
 
 const MDBGroup = HttpApiGroup.make("MDB")
-  .prefix("/mdb")
   .add(
-    HttpApiEndpoint.get("get_mission_database", "/:instance").setPath(
-      Schema.Struct({
-        instance: Schema.String
-      })
+    HttpApiEndpoint.get("getMissionDatabase", "/:instance").setPath(
+      Schema.Struct({ instance: Schema.String })
     ).addSuccess(yamcs.MissionDatabase)
   )
   .add(
-    HttpApiEndpoint.get("get_parameters", "/:instance/parameters").setPath(
-      Schema.Struct({
-        instance: Schema.String
-      })
+    HttpApiEndpoint.get("getParameters", "/:instance/parameters").setPath(
+      Schema.Struct({ instance: Schema.String })
     ).addSuccess(ListParametersResponse)
   )
   .add(
-    HttpApiEndpoint.get("get_parameter", "/:instance/parameters/:name").setPath(
+    HttpApiEndpoint.get("getParameter", "/:instance/parameters/:name").setPath(
       Schema.Struct({
         instance: Schema.String,
         name: yamcs.QualifiedName
       })
     ).addSuccess(yamcs.ParameterInfo)
   )
+  .addError(HttpApiError.NotFound)
+  .prefix("/mdb")
 
 const YamcsApi = HttpApi.make("YAMCS").add(MDBGroup).prefix("/yamcs/api")
 
@@ -62,31 +67,3 @@ export class Yamcs extends Effect.Service<Yamcs>()("yamcs", {
     return client
   })
 }) {}
-
-const program = Effect.gen(function*() {
-  const yamcs = yield* Yamcs
-
-  const result = yield* yamcs.MDB["get_mission_database"]({
-    path: {
-      instance: "a"
-    }
-  })
-
-  yield* Effect.log(result)
-}).pipe(
-  // Effect.catchTag("NotFound", () => Effect.logError("Element Not Found")),
-  Effect.catchTag("ParseError", (e) => Effect.logError("Decoding Error: " + e.message)),
-  Effect.catchAll((e) => Effect.logError(e.message))
-)
-
-const runnable = program.pipe(
-  Effect.provide(
-    Layer.mergeAll(
-      Yamcs.Default,
-      Logger.minimumLogLevel(LogLevel.Debug),
-      Logger.pretty
-    )
-  )
-)
-// Provide a Fetch-based HTTP client and run the program
-Effect.runFork(runnable)

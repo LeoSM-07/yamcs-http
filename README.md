@@ -1,15 +1,13 @@
 # Effect Package Template
 
-This template provides a solid foundation for building scalable and maintainable TypeScript package with Effect. 
+This template provides a solid foundation for building scalable and maintainable TypeScript package with Effect.
 
 ## Running Code
 
-This template leverages [tsx](https://tsx.is) to allow execution of TypeScript files via NodeJS as if they were written in plain JavaScript.
-
-To execute a file with `tsx`:
+To execute a file with `bun`:
 
 ```sh
-pnpm tsx ./path/to/the/file.ts
+bun ./src/Program.ts
 ```
 
 ## Operations
@@ -19,7 +17,7 @@ pnpm tsx ./path/to/the/file.ts
 To build the package:
 
 ```sh
-pnpm build
+bun build
 ```
 
 **Testing**
@@ -27,5 +25,11 @@ pnpm build
 To test the package:
 
 ```sh
-pnpm test
+bun test
+```
+
+This project makes use of (https://bun.com/docs/test/snapshots)[Bun snapshot teseting], so you should also run
+
+```sh
+bun test --update-snapshots
 ```

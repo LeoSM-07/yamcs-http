@@ -6,6 +6,7 @@ tmp/
 dist/
 build/
 docs/
+test/__snapshots__/*
 scratchpad/*
 !scratchpad/tsconfig.json
 .direnv/
