@@ -152,7 +152,7 @@ export const HistoryInfo = Schema.Struct({
   author: Schema.String
 })
 
-export const SpaceSystemInfo = Schema.Struct({
+const spaceSystemInfoFields = {
   name,
   qualifiedName,
   shortDescription,
@@ -160,8 +160,20 @@ export const SpaceSystemInfo = Schema.Struct({
   alias,
   version: Schema.optional(Schema.String),
   history: Schema.optional(Schema.Array(HistoryInfo))
-  // sub: SpaceSystemInfo[],
   // ancillaryData: {[key: Schema.String]: AncillaryDataInfo},
+}
+
+export interface SpaceSystemInfo extends Schema.Struct.Type<typeof spaceSystemInfoFields> {
+  // Define `subcategories` using recursion
+  readonly sub?: ReadonlyArray<SpaceSystemInfo> | undefined
+}
+
+export const SpaceSystemInfo = Schema.Struct({
+  ...spaceSystemInfoFields,
+  sub: Schema.optional(Schema.Array(
+    // Define `subcategories` using recursion
+    Schema.suspend((): Schema.Schema<SpaceSystemInfo> => SpaceSystemInfo)
+  ))
 })
 
 export const MissionDatabase = Schema.Struct({

@@ -1,12 +1,13 @@
 import { HttpClient, HttpClientResponse } from "@effect/platform"
 import type { HttpClientRequest } from "@effect/platform/HttpClientRequest"
-import { describe, expect, it } from "bun:test"
 import { Effect, Layer, Logger, LogLevel } from "effect"
-import { Yamcs } from "src/yamcs-http.js"
+import { Yamcs } from "src/yamcs.js"
 
 import getMissionDatabase from "./mock/mdb/getMissionDatabase.json" with { type: "json" }
 import getParameter from "./mock/mdb/getParameter.json" with { type: "json" }
-import getParameters from "./mock/mdb/getParameters.json" with { type: "json" }
+import getSpaceSystem from "./mock/mdb/getSpaceSystem.json" with { type: "json" }
+import listParameters from "./mock/mdb/listParameters.json" with { type: "json" }
+import listSpaceSystems from "./mock/mdb/listSpaceSystems.json" with { type: "json" }
 
 const makeJSONResponse = (req: HttpClientRequest, json: any) =>
   Effect.succeed(
@@ -26,7 +27,11 @@ const myClient = HttpClient.make((req) => {
     case "/mdb/gs_backend/parameters//FC433/FlightComputer/pl_battery_voltage":
       return makeJSONResponse(req, getParameter)
     case "/mdb/gs_backend/parameters":
-      return makeJSONResponse(req, getParameters)
+      return makeJSONResponse(req, listParameters)
+    case "/mdb/gs_backend/space-systems//":
+      return makeJSONResponse(req, getSpaceSystem)
+    case "/mdb/gs_backend/space-systems":
+      return makeJSONResponse(req, listSpaceSystems)
     case "/mdb/gs_backend":
       return makeJSONResponse(req, getMissionDatabase)
     default:
@@ -47,60 +52,10 @@ const myClient = HttpClient.make((req) => {
 
 const TestClient = Layer.succeed(HttpClient.HttpClient, myClient)
 
-const TestLayer = Layer.mergeAll(
+export const TestLayer = Layer.mergeAll(
   Yamcs.DefaultWithoutDependencies,
   Logger.minimumLogLevel(LogLevel.Warning),
   Logger.pretty
 ).pipe(
   Layer.provide(TestClient)
 )
-
-describe("MDB", () => {
-  it("getMissionDatabase", async () => {
-    const program = Effect.gen(function*() {
-      const yamcs = yield* Yamcs
-      const result = yield* yamcs.MDB.getMissionDatabase({ path: { instance: "gs_backend" } })
-      return result
-    }).pipe(
-      Effect.provide(TestLayer)
-    )
-
-    const result = await Effect.runPromise(program)
-    expect(result).toMatchSnapshot()
-  })
-
-  it("Decode `getParameters`", async () => {
-    const program = Effect.gen(function*() {
-      const yamcs = yield* Yamcs
-      const result = yield* yamcs.MDB.getParameters({
-        path: {
-          instance: "gs_backend"
-        }
-      })
-      return result
-    }).pipe(
-      Effect.provide(TestLayer)
-    )
-
-    const result = await Effect.runPromise(program)
-    expect(result).toMatchSnapshot()
-  })
-
-  it("Decode `getParameter`", async () => {
-    const program = Effect.gen(function*() {
-      const yamcs = yield* Yamcs
-      const result = yield* yamcs.MDB.getParameter({
-        path: {
-          instance: "gs_backend",
-          name: "/FC433/FlightComputer/pl_battery_voltage"
-        }
-      })
-      return result
-    }).pipe(
-      Effect.provide(TestLayer)
-    )
-
-    const result = await Effect.runPromise(program)
-    expect(result).toMatchSnapshot()
-  })
-})

@@ -1,0 +1,445 @@
+{
+  "spaceSystems": [
+    {
+      "name": "",
+      "qualifiedName": "/",
+      "sub": [
+        {
+          "name": "FC903",
+          "qualifiedName": "/FC903",
+          "sub": [
+            {
+              "name": "FlightComputer",
+              "qualifiedName": "/FC903/FlightComputer"
+            },
+            {
+              "name": "GSRadio",
+              "qualifiedName": "/FC903/GSRadio"
+            }
+          ]
+        },
+        {
+          "name": "FC433",
+          "qualifiedName": "/FC433",
+          "sub": [
+            {
+              "name": "FlightComputer",
+              "qualifiedName": "/FC433/FlightComputer"
+            },
+            {
+              "name": "GSRadio",
+              "qualifiedName": "/FC433/GSRadio"
+            }
+          ]
+        },
+        {
+          "name": "LabJackT7",
+          "qualifiedName": "/LabJackT7"
+        },
+        {
+          "name": "yamcs",
+          "qualifiedName": "/yamcs",
+          "sub": [
+            {
+              "name": "MacBookAir",
+              "qualifiedName": "/yamcs/MacBookAir",
+              "sub": [
+                {
+                  "name": "jvm",
+                  "qualifiedName": "/yamcs/MacBookAir/jvm"
+                },
+                {
+                  "name": "df",
+                  "qualifiedName": "/yamcs/MacBookAir/df",
+                  "sub": [
+                    {
+                      "name": "dev",
+                      "qualifiedName": "/yamcs/MacBookAir/df/dev"
+                    }
+                  ]
+                },
+                {
+                  "name": "processor",
+                  "qualifiedName": "/yamcs/MacBookAir/processor"
+                },
+                {
+                  "name": "links",
+                  "qualifiedName": "/yamcs/MacBookAir/links",
+                  "sub": [
+                    {
+                      "name": "lj-sim-in",
+                      "qualifiedName": "/yamcs/MacBookAir/links/lj-sim-in"
+                    },
+                    {
+                      "name": "fc-433",
+                      "qualifiedName": "/yamcs/MacBookAir/links/fc-433"
+                    },
+                    {
+                      "name": "labJack",
+                      "qualifiedName": "/yamcs/MacBookAir/links/labJack"
+                    },
+                    {
+                      "name": "gs-radio-433",
+                      "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-433"
+                    },
+                    {
+                      "name": "udp-in",
+                      "qualifiedName": "/yamcs/MacBookAir/links/udp-in"
+                    },
+                    {
+                      "name": "fc-903",
+                      "qualifiedName": "/yamcs/MacBookAir/links/fc-903"
+                    },
+                    {
+                      "name": "control-box",
+                      "qualifiedName": "/yamcs/MacBookAir/links/control-box"
+                    },
+                    {
+                      "name": "udp-out",
+                      "qualifiedName": "/yamcs/MacBookAir/links/udp-out"
+                    },
+                    {
+                      "name": "gs-radio-903",
+                      "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-903"
+                    }
+                  ]
+                },
+                {
+                  "name": "cmdQueue",
+                  "qualifiedName": "/yamcs/MacBookAir/cmdQueue",
+                  "sub": [
+                    {
+                      "name": "default",
+                      "qualifiedName": "/yamcs/MacBookAir/cmdQueue/default"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FC433",
+      "qualifiedName": "/FC433",
+      "sub": [
+        {
+          "name": "FlightComputer",
+          "qualifiedName": "/FC433/FlightComputer"
+        },
+        {
+          "name": "GSRadio",
+          "qualifiedName": "/FC433/GSRadio"
+        }
+      ]
+    },
+    {
+      "name": "FlightComputer",
+      "qualifiedName": "/FC433/FlightComputer"
+    },
+    {
+      "name": "GSRadio",
+      "qualifiedName": "/FC433/GSRadio"
+    },
+    {
+      "name": "FC903",
+      "qualifiedName": "/FC903",
+      "sub": [
+        {
+          "name": "FlightComputer",
+          "qualifiedName": "/FC903/FlightComputer"
+        },
+        {
+          "name": "GSRadio",
+          "qualifiedName": "/FC903/GSRadio"
+        }
+      ]
+    },
+    {
+      "name": "FlightComputer",
+      "qualifiedName": "/FC903/FlightComputer"
+    },
+    {
+      "name": "GSRadio",
+      "qualifiedName": "/FC903/GSRadio"
+    },
+    {
+      "name": "LabJackT7",
+      "qualifiedName": "/LabJackT7"
+    },
+    {
+      "name": "yamcs",
+      "qualifiedName": "/yamcs",
+      "sub": [
+        {
+          "name": "MacBookAir",
+          "qualifiedName": "/yamcs/MacBookAir",
+          "sub": [
+            {
+              "name": "jvm",
+              "qualifiedName": "/yamcs/MacBookAir/jvm"
+            },
+            {
+              "name": "df",
+              "qualifiedName": "/yamcs/MacBookAir/df",
+              "sub": [
+                {
+                  "name": "dev",
+                  "qualifiedName": "/yamcs/MacBookAir/df/dev"
+                }
+              ]
+            },
+            {
+              "name": "processor",
+              "qualifiedName": "/yamcs/MacBookAir/processor"
+            },
+            {
+              "name": "links",
+              "qualifiedName": "/yamcs/MacBookAir/links",
+              "sub": [
+                {
+                  "name": "lj-sim-in",
+                  "qualifiedName": "/yamcs/MacBookAir/links/lj-sim-in"
+                },
+                {
+                  "name": "fc-433",
+                  "qualifiedName": "/yamcs/MacBookAir/links/fc-433"
+                },
+                {
+                  "name": "labJack",
+                  "qualifiedName": "/yamcs/MacBookAir/links/labJack"
+                },
+                {
+                  "name": "gs-radio-433",
+                  "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-433"
+                },
+                {
+                  "name": "udp-in",
+                  "qualifiedName": "/yamcs/MacBookAir/links/udp-in"
+                },
+                {
+                  "name": "fc-903",
+                  "qualifiedName": "/yamcs/MacBookAir/links/fc-903"
+                },
+                {
+                  "name": "control-box",
+                  "qualifiedName": "/yamcs/MacBookAir/links/control-box"
+                },
+                {
+                  "name": "udp-out",
+                  "qualifiedName": "/yamcs/MacBookAir/links/udp-out"
+                },
+                {
+                  "name": "gs-radio-903",
+                  "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-903"
+                }
+              ]
+            },
+            {
+              "name": "cmdQueue",
+              "qualifiedName": "/yamcs/MacBookAir/cmdQueue",
+              "sub": [
+                {
+                  "name": "default",
+                  "qualifiedName": "/yamcs/MacBookAir/cmdQueue/default"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MacBookAir",
+      "qualifiedName": "/yamcs/MacBookAir",
+      "sub": [
+        {
+          "name": "jvm",
+          "qualifiedName": "/yamcs/MacBookAir/jvm"
+        },
+        {
+          "name": "df",
+          "qualifiedName": "/yamcs/MacBookAir/df",
+          "sub": [
+            {
+              "name": "dev",
+              "qualifiedName": "/yamcs/MacBookAir/df/dev"
+            }
+          ]
+        },
+        {
+          "name": "processor",
+          "qualifiedName": "/yamcs/MacBookAir/processor"
+        },
+        {
+          "name": "links",
+          "qualifiedName": "/yamcs/MacBookAir/links",
+          "sub": [
+            {
+              "name": "lj-sim-in",
+              "qualifiedName": "/yamcs/MacBookAir/links/lj-sim-in"
+            },
+            {
+              "name": "fc-433",
+              "qualifiedName": "/yamcs/MacBookAir/links/fc-433"
+            },
+            {
+              "name": "labJack",
+              "qualifiedName": "/yamcs/MacBookAir/links/labJack"
+            },
+            {
+              "name": "gs-radio-433",
+              "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-433"
+            },
+            {
+              "name": "udp-in",
+              "qualifiedName": "/yamcs/MacBookAir/links/udp-in"
+            },
+            {
+              "name": "fc-903",
+              "qualifiedName": "/yamcs/MacBookAir/links/fc-903"
+            },
+            {
+              "name": "control-box",
+              "qualifiedName": "/yamcs/MacBookAir/links/control-box"
+            },
+            {
+              "name": "udp-out",
+              "qualifiedName": "/yamcs/MacBookAir/links/udp-out"
+            },
+            {
+              "name": "gs-radio-903",
+              "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-903"
+            }
+          ]
+        },
+        {
+          "name": "cmdQueue",
+          "qualifiedName": "/yamcs/MacBookAir/cmdQueue",
+          "sub": [
+            {
+              "name": "default",
+              "qualifiedName": "/yamcs/MacBookAir/cmdQueue/default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cmdQueue",
+      "qualifiedName": "/yamcs/MacBookAir/cmdQueue",
+      "sub": [
+        {
+          "name": "default",
+          "qualifiedName": "/yamcs/MacBookAir/cmdQueue/default"
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "qualifiedName": "/yamcs/MacBookAir/cmdQueue/default"
+    },
+    {
+      "name": "df",
+      "qualifiedName": "/yamcs/MacBookAir/df",
+      "sub": [
+        {
+          "name": "dev",
+          "qualifiedName": "/yamcs/MacBookAir/df/dev"
+        }
+      ]
+    },
+    {
+      "name": "dev",
+      "qualifiedName": "/yamcs/MacBookAir/df/dev"
+    },
+    {
+      "name": "jvm",
+      "qualifiedName": "/yamcs/MacBookAir/jvm"
+    },
+    {
+      "name": "links",
+      "qualifiedName": "/yamcs/MacBookAir/links",
+      "sub": [
+        {
+          "name": "lj-sim-in",
+          "qualifiedName": "/yamcs/MacBookAir/links/lj-sim-in"
+        },
+        {
+          "name": "fc-433",
+          "qualifiedName": "/yamcs/MacBookAir/links/fc-433"
+        },
+        {
+          "name": "labJack",
+          "qualifiedName": "/yamcs/MacBookAir/links/labJack"
+        },
+        {
+          "name": "gs-radio-433",
+          "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-433"
+        },
+        {
+          "name": "udp-in",
+          "qualifiedName": "/yamcs/MacBookAir/links/udp-in"
+        },
+        {
+          "name": "fc-903",
+          "qualifiedName": "/yamcs/MacBookAir/links/fc-903"
+        },
+        {
+          "name": "control-box",
+          "qualifiedName": "/yamcs/MacBookAir/links/control-box"
+        },
+        {
+          "name": "udp-out",
+          "qualifiedName": "/yamcs/MacBookAir/links/udp-out"
+        },
+        {
+          "name": "gs-radio-903",
+          "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-903"
+        }
+      ]
+    },
+    {
+      "name": "control-box",
+      "qualifiedName": "/yamcs/MacBookAir/links/control-box"
+    },
+    {
+      "name": "fc-433",
+      "qualifiedName": "/yamcs/MacBookAir/links/fc-433"
+    },
+    {
+      "name": "fc-903",
+      "qualifiedName": "/yamcs/MacBookAir/links/fc-903"
+    },
+    {
+      "name": "gs-radio-433",
+      "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-433"
+    },
+    {
+      "name": "gs-radio-903",
+      "qualifiedName": "/yamcs/MacBookAir/links/gs-radio-903"
+    },
+    {
+      "name": "labJack",
+      "qualifiedName": "/yamcs/MacBookAir/links/labJack"
+    },
+    {
+      "name": "lj-sim-in",
+      "qualifiedName": "/yamcs/MacBookAir/links/lj-sim-in"
+    },
+    {
+      "name": "udp-in",
+      "qualifiedName": "/yamcs/MacBookAir/links/udp-in"
+    },
+    {
+      "name": "udp-out",
+      "qualifiedName": "/yamcs/MacBookAir/links/udp-out"
+    },
+    {
+      "name": "processor",
+      "qualifiedName": "/yamcs/MacBookAir/processor"
+    }
+  ],
+  "totalSize": 26
+}

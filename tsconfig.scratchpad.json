@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["scratchpad"],
+  "references": [
+    { "path": "tsconfig.src.json" }
+  ],
+  "compilerOptions": {
+    "types": ["bun"],
+    "tsBuildInfoFile": ".tsbuildinfo/scratchpad.tsbuildinfo",
+    "rootDir": "scratchpad",
+    "noEmit": true
+  }
+}
