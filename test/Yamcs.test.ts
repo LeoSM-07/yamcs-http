@@ -3,9 +3,10 @@ import type { HttpClientRequest } from "@effect/platform/HttpClientRequest"
 import { describe, expect, it } from "bun:test"
 import { Effect, Layer, Logger, LogLevel } from "effect"
 import { Yamcs } from "src/yamcs-http.js"
-import getMissionDatabase from "./snapshots/mdb/getMissionDatabase.json" with { type: "json" }
-import getParameter from "./snapshots/mdb/getParameter.json" with { type: "json" }
-import getParameters from "./snapshots/mdb/getParameters.json" with { type: "json" }
+
+import getMissionDatabase from "./mock/mdb/getMissionDatabase.json" with { type: "json" }
+import getParameter from "./mock/mdb/getParameter.json" with { type: "json" }
+import getParameters from "./mock/mdb/getParameters.json" with { type: "json" }
 
 const makeJSONResponse = (req: HttpClientRequest, json: any) =>
   Effect.succeed(
@@ -26,7 +27,7 @@ const myClient = HttpClient.make((req) => {
       return makeJSONResponse(req, getParameter)
     case "/mdb/gs_backend/parameters":
       return makeJSONResponse(req, getParameters)
-    case "/mdb":
+    case "/mdb/gs_backend":
       return makeJSONResponse(req, getMissionDatabase)
     default:
       // Default response for any other URL
@@ -65,7 +66,7 @@ describe("MDB", () => {
     )
 
     const result = await Effect.runPromise(program)
-    expect(result).toMatchObject(getMissionDatabase)
+    expect(result).toMatchSnapshot()
   })
 
   it("Decode `getParameters`", async () => {
@@ -82,7 +83,7 @@ describe("MDB", () => {
     )
 
     const result = await Effect.runPromise(program)
-    expect(result).toMatchObject(getParameters)
+    expect(result).toMatchSnapshot()
   })
 
   it("Decode `getParameter`", async () => {
@@ -100,6 +101,6 @@ describe("MDB", () => {
     )
 
     const result = await Effect.runPromise(program)
-    expect(result).toMatchObject(getParameter)
+    expect(result).toMatchSnapshot()
   })
 })
